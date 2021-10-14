@@ -1,19 +1,21 @@
-package entity;
+package com.fsoft.entity;
 
+import java.util.List;
 import java.util.Scanner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Employee {
 	// 1. Fields
-	
-	final int Experience = 0;
-	final int Fresher  = 1;
-	final int Intern   = 2;
 	private int id;
 	private String fullName;
 	private String birthDay;
 	private String phone;
 	private String email;
 	private String employeeType;
+	private String employeeCount;
+	public List<Certificate> certificates;
 	
 
 	public int getId() {
@@ -76,56 +78,50 @@ public abstract class Employee {
 	}
 
 	
-	// 3. Constructors
-	public Employee() {
-		// Default
-		super();
-		this.fullName = "";
-		this.birthDay = "";
-		this.phone = "";
-		this.email = "";
-		this.employeeType = "";
+	public String getEmployeeCount() {
+		return employeeCount;
 	}
 
-	public Employee(int id, String fullName, String birthDay, String phone, String email, String employeeType) {
+	public void setEmployeeCount(String employeeCount) {
+		this.employeeCount = employeeCount;
+	}
+	
+	 public Employee() {
+	        certificates = new ArrayList<>();
+	    }
+	 
+	 // Các getter, setter của Employee thể hiện tính đóng gói (encapsulation)
+	
+	// 3. Constructors
+	public Employee(int id, String fullName, String birthDay, String phone, String email, String employeeType, String employeeCount) {
 		this.id = id;
 		this.fullName = fullName;
 		this.birthDay = birthDay;
 		this.phone = phone;
 		this.email = email;
 		this.employeeType = employeeType;
+		this.employeeCount = employeeCount;
+		certificates = new ArrayList<>();
 	}
-	
-//	public void input(Scanner scan) {
-//		System.out.println("Nhập id: ");
-//		this.id = Integer.parseInt(scan.nextLine());
-//		System.out.println("Nhập họ tên: ");
-//		this.fullName = scan.nextLine();
-//		System.out.println("Nhập ngày sinh: ");
-//		this.birthDay = scan.nextLine();
-//		System.out.println("Nhập số điện thoại: ");
-//		this.phone = Integer.parseInt(scan.nextLine());
-//		System.out.println("Nhập email: ");
-//		this.email = scan.nextLine();
-//		do {
-//			System.out.print("Nhập loại nhân viên ((0) Experience, (1) Fresher, (2) Intern): ");
-//			this.employeeType = Integer.parseInt(scan.nextLine());
-//		} while (this.employeeType < 0 || this.employeeType > 3);
-//	}
-	
-//	public String showEmployeeType() {
-//		if(this.employeeType == Experience)
-//			return "Experience";
-//		else if(this.employeeType == Fresher)
-//			return "Fresher";
-//		else
-//			return "Intern";
-//	}
 	
 	
 	public String showInfo() {
 		return "id: " + this.id + "\t\tHọ tên: " + this.fullName + '/' + "\t\tNgày sinh: " + this.birthDay + '/' + "\t\tSố điện thoại: " + this.phone
 				+ "\t\tEmail: " + this.email;
+	}
+	
+	public String showCertificate() {
+		String c = "\nCertificate: ";
+		int count = 1;
+		for (Certificate certificate : certificates) {
+			c = c + "\nCertificate" + count 
+					+ "\n CertificateID: " + certificate.certificateId 
+					+ "\n CertificateName: " + certificate.certificateName 
+					+ "\n CertificateRank: " + certificate.certificateRank
+					+ "\n CertificateDate: " + certificate.certificateDate;
+			count ++;			
+		}
+		return c;
 	}
 
 }
