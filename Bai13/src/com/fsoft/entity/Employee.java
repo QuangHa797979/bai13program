@@ -91,8 +91,10 @@ public abstract class Employee {
 	    }
 	 
 	 // Các getter, setter của Employee thể hiện tính đóng gói (encapsulation)
+	 // lấy get khi sửa
 	
 	// 3. Constructors
+	// tạo ra các obj
 	public Employee(int id, String fullName, String birthDay, String phone, String email, String employeeType, String employeeCount) {
 		this.id = id;
 		this.fullName = fullName;
@@ -103,7 +105,6 @@ public abstract class Employee {
 		this.employeeCount = employeeCount;
 		certificates = new ArrayList<>();
 	}
-	
 	
 	public String showInfo() {
 		return "id: " + this.id + "\t\tHọ tên: " + this.fullName + '/' + "\t\tNgày sinh: " + this.birthDay + '/' + "\t\tSố điện thoại: " + this.phone

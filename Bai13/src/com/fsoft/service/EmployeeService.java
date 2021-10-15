@@ -1,8 +1,8 @@
-package com.fsoft.repository;
+package com.fsoft.service;
 
 import com.fsoft.entity.*;
 
-public abstract class EmployeeAbstract {
+public abstract class EmployeeService {
 
 
     public abstract void addNew(Employee employee);

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fsoft.entity.*;
-import com.fsoft.repository.*;
+import com.fsoft.service.*;
 
 
-public class EmployeeController extends EmployeeAbstract {
+public class EmployeeController extends EmployeeService {
 
 	List<Employee> employees = new ArrayList<>();
 	
