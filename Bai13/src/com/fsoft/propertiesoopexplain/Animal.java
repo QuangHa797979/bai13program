@@ -2,17 +2,17 @@ package com.fsoft.propertiesoopexplain;
 
 public abstract class Animal {
 
-private String name;
+	private String name;
 
-public Animal(String name) {
-	this.name = name;
-}
+	public Animal(String name) {
+		this.name = name;
+	}
 
-public abstract void sayHello();
+	public abstract void sayHello();
 
-public String getName() {
-	return name;
-}
+	public String getName() {
+		return name;
+	}
 }
 
 // Abstract class Animal có phương thức sayHello. 

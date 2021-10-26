@@ -3,7 +3,15 @@ package com.fsoft.classobjectexample;
 public class Account {
 		private int id;
 		private String name;
+		public static final int MAX_SECONDS = 25;
 		
+		/**
+		 * @return the maxSeconds
+		 */
+		public static int getMaxSeconds() {
+			return MAX_SECONDS;
+		}
+
 		/**
 		 * @return the id
 		 */

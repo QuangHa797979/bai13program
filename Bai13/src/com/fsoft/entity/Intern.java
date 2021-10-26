@@ -8,6 +8,8 @@ package com.fsoft.entity;
 import java.util.Scanner;
 
 public class Intern extends Employee {
+	// Intern is - a Employee
+	// Intern là một trường hợp đặc biệt của Employee
 	// 1. Fields
 	private String majors;
 	private String semester;
@@ -49,6 +51,8 @@ public class Intern extends Employee {
 
 	public Intern(int id, String fullName, String birthDay, String phone, String email, String employeeType, String employeeCount, String majors, String semester, String universityName) {
 		super(id, fullName, birthDay, phone, email, employeeType, employeeCount);
+		// Gọi Constructor của lớp cha Employee
+		// Sử dụng được các thuộc tính của lớp cha
 		this.majors = majors;
 		this.semester = semester;
 		this.universityName = universityName;

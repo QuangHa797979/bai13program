@@ -13,12 +13,12 @@ public class HinhTron {
     float cv;
     float dt;
  
-    // Constructor không có tham số truyền vào
-    // Phương thức này có tên HinhTron và có giá trị trả về
+    // Constructor không có tham số truyền và có giá trị trả về
     public HinhTron() {
         nhapBanKinh();  // Thử gọi hàm nhapBanKinh()
     }
  
+    
     // Constructor có một tham số r truyền vào
     // Phương thức này có tên HinhTron và có giá trị trả về theo r
     public HinhTron(float r) {

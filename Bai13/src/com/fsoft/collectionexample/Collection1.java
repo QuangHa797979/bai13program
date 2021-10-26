@@ -32,7 +32,7 @@ public class Collection1 {
  
         Map<String, Integer> hashMap = new HashMap<>();
         for (int i = 1; i <= NUM_OF_ELEMENT; i++) {
-            hashMap.put("Key0" + i, i);
+            hashMap.put("Key0", i);
         }
         System.out.println("HashMap: " + hashMap);
     }

@@ -24,3 +24,12 @@ public class TestPerform{
 // StringBuffer, StringBuilder có thể thay đổi (mutable)
 // StringBuilder và StringBuffer là giống nhau, 
 // nó chỉ khác biệt tình huống sử dụng có liên quan tới đa luồng (Multi Thread). => về tốc độ xử lý StringBuilder là tốt nhất, sau đó StringBuffer và cuối cùng mới là String.
+
+
+// String Pool vùng nhớ 
+
+// Hash map 
+
+
+
+

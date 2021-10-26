@@ -2,19 +2,19 @@ package com.fsoft.service;
 
 import com.fsoft.entity.*;
 
-public abstract class EmployeeService {
+public interface EmployeeService {
 
 
-    public abstract void addNew(Employee employee);
+    void addNew(Employee employee);
     
-    public abstract void update(Employee employee);
+    void update(Employee employee);
 
-    public abstract void delete(int id);
+   void delete(int id);
 
-    public abstract void findIntern();
+    void findIntern();
 
-    public abstract void findExperience();
+    void findExperience();
 
-    public abstract void findFesher();
+    void findFesher();
 }
 

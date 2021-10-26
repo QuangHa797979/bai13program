@@ -7,7 +7,7 @@ import com.fsoft.entity.*;
 import com.fsoft.service.*;
 
 
-public class EmployeeController extends EmployeeService {
+public class EmployeeController implements EmployeeService {
 
 	List<Employee> employees = new ArrayList<>();
 	
@@ -44,7 +44,7 @@ public class EmployeeController extends EmployeeService {
 		}
 	}
 
-	private Employee getEmployeeByID(int id) {
+	public Employee getEmployeeByID(int id) {
 		for (Employee employee: employees) {
 			if(employee.getId() == id) {
 				return employee;
@@ -73,6 +73,9 @@ public class EmployeeController extends EmployeeService {
 		int countExperience = 0;
 		for (Employee employee : employees) {
 			if (employee instanceof Experience) {
+				// instanceof được sử dụng để kiểm tra Experience  là thể hiện của employee hay không.
+				// Khi kiểu của lớp con Experience tham chiếu tới đối tượng của lớp cha employee được gọi là downcasting. 
+				// Do Experience kế thừa Employee nên đối tượng của Experience có thể tham chiếu đến cả hai lớp Experience và Employee
 				countExperience++;
 				System.out.println(employee.showInfo());
 			}

@@ -7,7 +7,7 @@ public static final String EMPLOYEE_EXPERIENCE = "Experience";
 public static final String VALID_EMAIL_REGEX =  "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
 public static final String VALID_NAME_REGEX = "[a-zA-Z\\s]+";
 public static final String VALID_PHONE_NUMBER_REGEX = "^(0|\\+84)(\\s|\\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\\d)(\\s|\\.)?(\\d{3})(\\s|\\.)?(\\d{3})$";
-public static final String VALID_BIRTHDAY_REGEX = "^\\d{2}-\\d{2}-\\d{2}$";
+public static final String VALID_BIRTHDAY_REGEX = "^\\d{2}-\\d{2}-\\d{4}$";
 public static final String VALID_INPUT_NUMBER_REGEX = "-?\\d+(\\.\\d+)?";
 
 
@@ -44,9 +44,9 @@ public void checkEmail(String str) throws EmailException {
 		}
 	}
 
-public void checkBirthDay(String str) throws BirthdayException {
+public void checkBirthDay(String str) throws BirthDayException {
 	if(!str.matches(Common.VALID_BIRTHDAY_REGEX)) {
-		throw new BirthdayException("Invalid BirthDay"); 
+		throw new BirthDayException("Invalid BirthDay"); 
 	} else {
 			System.out.println("BirthDay accecpted");
 		}

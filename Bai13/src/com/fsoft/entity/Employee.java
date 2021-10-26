@@ -17,6 +17,17 @@ public abstract class Employee {
 	private String employeeCount;
 	public List<Certificate> certificates;
 	
+//	abstract String Info();
+	
+	// Employee has - a Certificate;
+	// Một employee chứa nhiều certificate
+	// Quan hệ HAS-A giúp làm tăng tính tái sử dụng của code
+	
+	// Abstract class
+	// khi extend lại abstract class phải định nghĩa lại các hàm trong abstarct
+	// Abstract class bên trong có absstract method -> abstract
+	// Abstract class bên trong không có absstract method -> non-abstract
+	// không thể khởi tạo obj trực tiếp bên trong
 
 	public int getId() {
 		return id;
@@ -103,6 +114,7 @@ public abstract class Employee {
 		this.email = email;
 		this.employeeType = employeeType;
 		this.employeeCount = employeeCount;
+		// this được sử dụng để phân biệt biến cục bộ Employee và biến toàn cục, tránh trùng tên biến.
 		certificates = new ArrayList<>();
 	}
 	

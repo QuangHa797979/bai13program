@@ -5,6 +5,9 @@ public class Program {
 			Account account1 = new Account(); // phương thức main gọi đến object account
 			account1.setId(1);  // gán cho id của account bằng 1
 			account1.setName("Nguyen Van A");
+			account1.setName("abcd");
+//			account1.getMaxSeconds();
+			
 			
 			Account account2 = new Account();
 			account2.setId(1);

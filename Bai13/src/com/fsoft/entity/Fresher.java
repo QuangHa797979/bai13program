@@ -7,7 +7,9 @@ package com.fsoft.entity;
 
 import java.util.Scanner;
 
-public class Fresher extends Employee {
+public class Fresher extends Employee { 
+	// Fresher is - a Employee
+	// Fresher là một trường hợp đặc biệt của Employee
 	// 1. Fields
 	private String graduationDate;
 	private String graduationRank;
@@ -47,13 +49,15 @@ public class Fresher extends Employee {
 	// 3. Constructors
 	public Fresher() {
 		super();
-		this.graduationDate = "";
-		this.graduationRank = "";
-		this.education = "";
+//		this.graduationDate = "";
+//		this.graduationRank = "";
+//		this.education = "";
 	}
 
 	public Fresher(int id, String fullName, String birthDay, String phone, String email, String employeeType, String employeeCount, String graduationDate, String graduationRank, String education) {
 		super(id, fullName, birthDay, phone, email, employeeType, employeeCount);
+		// Gọi Constructor của lớp cha Employee
+		// Sử dụng được các thuộc tính của lớp cha
 		this.graduationDate = graduationDate;
 		this.graduationRank = graduationRank;
 		this.education = education;
